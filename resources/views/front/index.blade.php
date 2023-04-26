@@ -5,11 +5,11 @@
 
         <img src="{{ asset('images/home.jpeg') }}"
             class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-        <div class="absolute top-2/4 left-1/4 -translate-x-1/4 -translate-y-2/4">
-            <div class="font-semibold sm:text-3xl text-2xl font-sans">
+        <div class="absolute top-2/4 pl-7 sm:pl-0 sm:left-1/4  sm:-translate-x-1/4 -translate-y-2/4">
+            <div class="font-semibold text-2xl sm:text-3xl font-sans">
                 Logo Design By Experts
             </div>
-            <div class=" py-10 grid sm:grid-cols-2 grid-cols-1 gap-4">
+            <div class=" sm:py-10 py-5 grid sm:grid-cols-2 grid-cols-1 sm:gap-4 gap-2">
                 <div class="">
                     <input class="text-green-500 rounded-md sm:w-5 sm:h-5 mb-[0.4rem]" type="checkbox" checked disabled>
                     <label class="sm:text-2xl">Individual design</label>
