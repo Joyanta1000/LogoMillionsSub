@@ -61,7 +61,7 @@
                     </label>
                     <textarea name="description"
                         class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                        id="summernote" type="text" placeholder="">{{ old('description') }}
+                        id="editor" type="text" placeholder="">{{ old('description') }}
                 </textarea>
                     <p class="text-gray-600 text-xs italic">Make it as long and as crazy as you'd like</p>
                     @error('description')
