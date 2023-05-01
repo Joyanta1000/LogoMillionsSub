@@ -3,6 +3,22 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
+    <!-- Scripts -->
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdn.ckeditor.com/ckeditor5/36.0.0/classic/ckeditor.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+    @toastScripts
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet" />
     {{-- <link rel="stylesheet" type="text/css" href="./slick/slick.css">
@@ -114,16 +130,31 @@
             background-color: #48BB78;
             opacity: 1;
         }
+
+        @layer base {
+
+            input[type="number"]::-webkit-inner-spin-button,
+            input[type="number"]::-webkit-outer-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+        }
     </style>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
+   
 </head>
 
 <body>
+    
     <div class="container-fluid sm:container-fluid">
+        
         @include('front.layouts.includes.navbar')
+        @include('toastr.index')
         @yield('content')
         @include('front.layouts.includes.footer')
     </div>
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+
     <script>
         $(document).ready(function($) {
 
@@ -153,7 +184,11 @@
                     left: +slideWidth
                 }, 200, function() {
                     $('#mySlider ul li:last-child').prependTo('#mySlider ul');
-                    $('#mySlider ul').css({'left': '', 'transition': 'all 0.3s ease-in-out', 'transform': 'rotate3d(0,0,0,0deg)'});
+                    $('#mySlider ul').css({
+                        'left': '',
+                        'transition': 'all 0.3s ease-in-out',
+                        'transform': 'rotate3d(0,0,0,0deg)'
+                    });
                 });
             };
 
@@ -162,7 +197,11 @@
                     left: -slideWidth
                 }, 200, function() {
                     $('#mySlider ul li:first-child').appendTo('#mySlider ul');
-                    $('#mySlider ul').css({'left': '', 'transition': 'all 0.3s ease-in-out', 'transform': 'rotate3d(0,0,0,0deg)'});
+                    $('#mySlider ul').css({
+                        'left': '',
+                        'transition': 'all 0.3s ease-in-out',
+                        'transform': 'rotate3d(0,0,0,0deg)'
+                    });
 
                 });
             };
@@ -187,6 +226,8 @@
                 //Stop the carousel on click
                 clearInterval(interval);
             });
+
+
         });
     </script>
 </body>

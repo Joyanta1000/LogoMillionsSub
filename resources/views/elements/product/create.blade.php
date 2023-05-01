@@ -6,7 +6,7 @@
     </x-slot>
 
     <div class="container py-6 flex justify-center items-center">
-        <form class="w-full mx-3 sm:mx-12" action="{{ route('product.store') }}" method="post"
+        <form class="w-full sm:w-[50rem] mx-3 sm:mx-12" action="{{ route('product.store') }}" method="post"
             enctype="multipart/form-data">
             @method('post')
             @csrf

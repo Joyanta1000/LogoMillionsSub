@@ -40,6 +40,22 @@
                             {{ __('Product') }}
                         </x-dropdown-link>
 
+                        <x-dropdown-link :href="route('order_category.index')">
+                            {{ __('Order Category') }}
+                        </x-dropdown-link>
+
+                        <x-dropdown-link :href="route('order_category_amenities.index')">
+                            {{ __('Order Category Amenities') }}
+                        </x-dropdown-link>
+
+                        <x-dropdown-link :href="route('slider_heading.index')">
+                            {{ __('Slider Heading') }}
+                        </x-dropdown-link>
+
+                        <x-dropdown-link :href="route('slider_heading_menus.index')">
+                            {{ __('Slider Heading Menus') }}
+                        </x-dropdown-link>
+
                         <hr>
 
                         <x-dropdown-link :href="route('profile.edit')">
@@ -73,9 +89,9 @@
                     </x-slot>
                     
                     <x-slot name="content">
-                        <x-dropdown-link :href="route('register')">
+                        {{-- <x-dropdown-link :href="route('/register')">
                             {{ __('Register') }}
-                        </x-dropdown-link>
+                        </x-dropdown-link> --}}
                         <x-dropdown-link :href="route('login')">
                             {{ __('Login') }}
                         </x-dropdown-link>
@@ -117,6 +133,18 @@
                 <x-responsive-nav-link :href="route('product.index')">
                     {{ __('Product') }}
                 </x-responsive-nav-link>
+                <x-responsive-nav-link :href="route('order_category.index')">
+                    {{ __('Order Category') }}
+                </x-responsive-nav-link>
+                <x-responsive-nav-link :href="route('order_category_amenities.index')">
+                    {{ __('Order Category Amenities') }}
+                </x-responsive-nav-link>
+                <x-responsive-nav-link :href="route('slider_heading.index')">
+                    {{ __('Slider Heading') }}
+                </x-responsive-nav-link>
+                <x-responsive-nav-link :href="route('slider_heading_menus.index')">
+                    {{ __('Slider Heading Menus') }}
+                </x-responsive-nav-link>
                 <hr>
                 <x-responsive-nav-link :href="route('profile.edit')">
                     {{ __('Profile') }}
@@ -139,9 +167,9 @@
         <div class="pt-1 pb-1 border-t border-gray-200 dark:border-gray-600">
           
             <div class=" space-y-1">
-                <x-responsive-nav-link :href="route('register')">
+                {{-- <x-responsive-nav-link :href="route('register')">
                     {{ __('Register') }}
-                </x-responsive-nav-link>
+                </x-responsive-nav-link> --}}
                 <x-responsive-nav-link :href="route('login')">
                     {{ __('Login') }}
                 </x-responsive-nav-link>

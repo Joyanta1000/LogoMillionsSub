@@ -16,10 +16,14 @@ return new class extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->string('name')->nullable();
-            $table->string('url', 255)->nullable();
             $table->longText('description')->nullable();
             $table->timestamps();
         });
+
+        Schema::table('products', function (Blueprint $table) {
+            $table->softDeletes();
+        });
+
     }
 
     /**
@@ -29,6 +33,9 @@ return new class extends Migration
      */
     public function down()
     {
+        // Schema::table('products', function (Blueprint $table) {
+        //     $table->dropSoftDeletes();
+        // });
         Schema::dropIfExists('products');
     }
 };
